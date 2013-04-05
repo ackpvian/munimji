@@ -11,27 +11,68 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static int ic_launcher=0x7f020000;
-        public static int sdslabs_logo=0x7f020001;
+        public static final int add1=0x7f020000;
+        public static final int bgcolor=0x7f020001;
+        public static final int bgcolor1=0x7f020002;
+        public static final int delete=0x7f020003;
+        public static final int edit=0x7f020004;
+        public static final int given=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int info=0x7f020007;
+        public static final int sdslabs_logo=0x7f020008;
+        public static final int taken=0x7f020009;
     }
     public static final class id {
-        public static int bAdd=0x7f070000;
-        public static int bSub=0x7f070001;
-        public static int menu_settings=0x7f070002;
+        public static final int AddId=0x7f070001;
+        public static final int Total1=0x7f070000;
+        public static final int Update_Entry=0x7f070002;
+        public static final int bAdd=0x7f070009;
+        public static final int bAdd1=0x7f070012;
+        public static final int bDel=0x7f07000f;
+        public static final int bDelEntry=0x7f070004;
+        public static final int bSub=0x7f07000a;
+        public static final int bSub1=0x7f070013;
+        public static final int etAmtEnter=0x7f070008;
+        public static final int etNameAdder=0x7f070006;
+        public static final int etNameDelete=0x7f07000e;
+        public static final int etNameUpdate=0x7f070011;
+        public static final int infoAmt=0x7f070003;
+        public static final int menu_settings=0x7f070014;
+        public static final int table=0x7f07000b;
+        public static final int textView1=0x7f070005;
+        public static final int textView2=0x7f070007;
+        public static final int tvAmt=0x7f07000d;
+        public static final int tvName=0x7f07000c;
+        public static final int tvsuggestions=0x7f070010;
     }
     public static final class layout {
-        public static int activity_main=0x7f030000;
-        public static int splash=0x7f030001;
+        public static final int activity_main=0x7f030000;
+        public static final int buddy_adder=0x7f030001;
+        public static final int dbview=0x7f030002;
+        public static final int delete_entry=0x7f030003;
+        public static final int splash=0x7f030004;
+        public static final int tv=0x7f030005;
+        public static final int update=0x7f030006;
     }
     public static final class menu {
-        public static int activity_main=0x7f060000;
+        public static final int activity_main=0x7f060000;
     }
     public static final class string {
-        public static int Button1=0x7f040002;
-        public static int Button2=0x7f040004;
-        public static int app_name=0x7f040000;
-        public static int hello_world=0x7f040001;
-        public static int menu_settings=0x7f040003;
+        public static final int AddBuddy=0x7f040009;
+        public static final int Button1=0x7f040002;
+        public static final int Button2=0x7f040004;
+        public static final int Buttonmainpage=0x7f04000b;
+        public static final int Del=0x7f04000e;
+        public static final int Info=0x7f04000a;
+        public static final int Update=0x7f04000c;
+        public static final int amount=0x7f040007;
+        public static final int amount2=0x7f040008;
+        public static final int app_name=0x7f040000;
+        public static final int bDel=0x7f04000d;
+        public static final int hello_world=0x7f040001;
+        public static final int menu_settings=0x7f040003;
+        public static final int name=0x7f040005;
+        public static final int name2=0x7f040006;
     }
     public static final class style {
         /** 
@@ -55,10 +96,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f050000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f050001;
     }
 }

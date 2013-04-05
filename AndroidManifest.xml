@@ -14,20 +14,54 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Splash">
-            /* android:label="@string/app_name"> */ 
+            android:name=".Splash"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.munimji.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Adder"
+            android:label="Add Buddy Wizard" >
+            <intent-filter>
+                <action android:name="com.example.munimji.ADDER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".View"
+            android:label="View Records" >
+            <intent-filter>
+                <action android:name="com.example.munimji.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Update"
+            android:label="Update Records" >
+            <intent-filter>
+                <action android:name="com.example.munimji.UPDATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Delete"
+            android:label="Delete Records" >
+            <intent-filter>
+                <action android:name="com.example.munimji.DELETE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

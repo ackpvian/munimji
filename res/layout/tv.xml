@@ -8,7 +8,8 @@
         android:id="@+id/tvsuggestions"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_launcher"
-        android:text="TextView" />
+        android:text="TextView" 
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"/>
 
 </LinearLayout>

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="10dp"
+    android:background="@drawable/intentfinal" >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -28,14 +29,13 @@
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="11.00"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:hint="@string/name2"
-            android:padding="2dp"
-            android:paddingLeft="4dp" >
-			<requestFocus />
+            android:hint="@string/name2" >
+
+            <requestFocus />
         </EditText>
     </LinearLayout>
 
@@ -58,12 +58,11 @@
 
         <EditText
             android:id="@+id/etAmtEnter"
+            android:layout_marginLeft="10dp"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/amount2"
-            android:padding="2dp" >
+            android:hint="@string/amount3">
         </EditText>
     </LinearLayout>
 

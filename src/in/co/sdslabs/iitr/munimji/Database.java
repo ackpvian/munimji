@@ -112,8 +112,7 @@ public class Database {
 
 		ContentValues cv = new ContentValues();
 		cv.put(AMOUNT, amount);
-		database.updateWithOnConflict(TABLE, cv, NAME + "=?", null,
-				SQLiteDatabase.CONFLICT_IGNORE);
+		database.update(TABLE, cv, NAME + "=?", null);
 	}
 
 	public int getAmt() {
@@ -142,7 +141,7 @@ public class Database {
 		    int iAmount=c.getColumnIndex(AMOUNT);
 
 		    for(c.moveToFirst(); !c.isAfterLast();c.moveToNext()){
-		        result.add(c.getString(iRow)+" "+c.getString(iName)+" "+c.getString(iAmount));
+		        result.add(c.getString(iRow)+" 				"+c.getString(iName)+"											 "+c.getString(iAmount));
 		    }
 		    return result;
 		}

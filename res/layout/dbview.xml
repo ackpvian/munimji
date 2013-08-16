@@ -2,23 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/intentfinal" >
+    android:background="@drawable/intentfinal"
+    android:orientation="vertical" >
 
     <TableLayout
         android:id="@+id/table"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <TableRow>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Names" 
-                android:textSize="20sp"
-                android:textColor="@android:color/white"/>
+                android:text="Names"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -26,11 +27,12 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Amount(in Rs.)"
-                android:textSize="20sp"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
         </TableRow>
     </TableLayout>
 
+    <!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
@@ -57,5 +59,12 @@
             android:textSize="15sp"
             android:textColor="@android:color/white"/>
     </LinearLayout>
+    -->
+    
+
+    <ListView
+        android:id="@+id/listMe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

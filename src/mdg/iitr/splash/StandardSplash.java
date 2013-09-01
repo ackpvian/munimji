@@ -54,8 +54,8 @@ public class StandardSplash extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.standard_splash);
 
-		yourIntent  =  ;
-		/*
+		/*yourIntent  =  ;
+		
 		 * DECLARE YOUR INTENT HERE That is all you have got to do It will be
 		 * fired automatically when it should
 		 */

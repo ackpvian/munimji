@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:divider="@drawable/abs__list_divider_holo_light"
+    android:divider="@android:drawable/divider_horizontal_bright"
     android:dividerPadding="16dp"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal"

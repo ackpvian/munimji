@@ -119,7 +119,7 @@ public class Database {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { ROWID, NAME, AMOUNT };
 		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
-		
+
 		int total = 0;
 		int iAmt = c.getColumnIndex(AMOUNT);
 
@@ -133,31 +133,34 @@ public class Database {
 
 	public ArrayList<String> getData() {
 
-		    String[]columns=new String[]{ ROWID,NAME, AMOUNT};
-		    Cursor c =database.query(TABLE, columns, null, null, null, null, null);
-		    ArrayList<String> result = new ArrayList<String>();
-		    int iRow=c.getColumnIndex(ROWID);
-		    int iName=c.getColumnIndex(NAME);
-		    int iAmount=c.getColumnIndex(AMOUNT);
-
-		    for(c.moveToFirst(); !c.isAfterLast();c.moveToNext()){
-		        result.add(c.getString(iRow)+" 				"+c.getString(iName)+"											 "+c.getString(iAmount));
-		    }
-		    return result;
-		}
-/*		String[] columns = new String[] { ROWID, NAME, AMOUNT };
+		String[] columns = new String[] { ROWID, NAME, AMOUNT };
 		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
-		String result = "";
-
+		ArrayList<String> result = new ArrayList<String>();
+		int iRow = c.getColumnIndex(ROWID);
 		int iName = c.getColumnIndex(NAME);
+		int iAmount = c.getColumnIndex(AMOUNT);
 
 		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
-			result = result + c.getString(iName) + "\n";
-
+			result.add(c.getString(iRow) + " 				" + c.getString(iName)
+					+ "											 " + c.getString(iAmount));
 		}
+		return result;
+	}
 
-		return result;*/
-
+	/*
+	 * String[] columns = new String[] { ROWID, NAME, AMOUNT }; Cursor c =
+	 * database.query(TABLE, columns, null, null, null, null, null); String
+	 * result = "";
+	 * 
+	 * int iName = c.getColumnIndex(NAME);
+	 * 
+	 * for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) { result = result
+	 * + c.getString(iName) + "\n";
+	 * 
+	 * }
+	 * 
+	 * return result;
+	 */
 
 	public void getSuggestions(ArrayList<String> result) {
 		// TODO Auto-generated method stub
@@ -169,23 +172,19 @@ public class Database {
 		}
 	}
 
-	public String getData2() {
-		// TODO Auto-generated method stub
-		String[] columns = new String[] { ROWID, NAME, AMOUNT };
-		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
-		String result = "";
-
-		int total = 0;
-		int iAmt = c.getColumnIndex(AMOUNT);
-
-		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
-			result = result + c.getString(iAmt) + "\n";
-			total = total + iAmt;
-		}
-
-		return result;
-	}
-
+	/*
+	 * public String getData2() { // TODO Auto-generated method stub String[]
+	 * columns = new String[] { ROWID, NAME, AMOUNT }; Cursor c =
+	 * database.query(TABLE, columns, null, null, null, null, null); String
+	 * result = "";
+	 * 
+	 * int total = 0; int iAmt = c.getColumnIndex(AMOUNT);
+	 * 
+	 * for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) { result = result
+	 * + c.getString(iAmt) + "\n"; total = total + iAmt; }
+	 * 
+	 * return result; }
+	 */
 	public void deleteEntry(String name2) {
 		// TODO Auto-generated method stub
 		database.delete(TABLE, NAME + "=?", new String[] { name2 });

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:divider="@android:drawable/divider_horizontal_bright"
+    android:dividerPadding="16dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="20dp"
+    android:showDividers="end" >
+
+    <!--
+         <include
+        android:id="@+id/list_section_text"
+        layout="@android:layout/preference_category" />
+    -->
+
+    <TextView
+        android:id="@+id/list_section_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:attr/textColorPrimary" />
+
+</LinearLayout>

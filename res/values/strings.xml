@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Munimji</string>
+    <string name="Button1">Given</string><string name="menu_settings">Settings</string>
+    <string name="Button2">Taken</string>
+    <string name="name">Name : </string>
+    <string name="name2">		Buddy\'s name</string>
+    <string name="amount">Amount : </string>
+    <string name="amount2">       	Amount       </string>
+    <string name="AddBuddy">Add Buddy</string>
+    <string name="Info">Check your balance</string>
+    <string name="Buttonmainpage">Add buddy</string>
+    <string name="Update">Update Entry</string>
+    <string name="bDel">Delete Buddy Name</string>
+    <string name="Del">Delete Entry</string>
+    <string name="amount3">Initial Amount</string>
+
+</resources>

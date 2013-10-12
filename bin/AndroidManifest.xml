@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.co.sdslabs.iitr.munimji"
+    android:versionCode="1"
+    android:versionName="0.1 beta" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".StandardSplash"
+            android:label="@string/app_name" >
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SPLASH" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Adder"
+            android:icon="@drawable/add1"
+            android:label="Add Buddy"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.munimji.ADDER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".View"
+            android:icon="@drawable/info"
+            android:label="View Records"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.munimji.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Update"
+            android:icon="@drawable/edit"
+            android:label="Update Entry"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.munimji.UPDATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.co.sdslabs.munimji.AboutUsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Delete"
+            android:icon="@drawable/delete"
+            android:label="Delete Records"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.munimji.DELETE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FeedBack"
+            android:icon="@drawable/feedback"
+            android:label=" "
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.munimji.FEEDBACK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

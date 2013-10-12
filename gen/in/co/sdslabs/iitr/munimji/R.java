@@ -39,55 +39,13 @@ public final class R {
     public static final class id {
         public static final int AddId=0x7f080000;
         public static final int Update_Entry=0x7f080001;
-        public static final int android_icon=0x7f08001a;
-        public static final int apple_icon=0x7f08001c;
-        public static final int bAdd=0x7f080009;
-        public static final int bAdd1=0x7f080024;
-        public static final int bDel=0x7f08000e;
         public static final int bDelEntry=0x7f080003;
         public static final int bFeedBack=0x7f080004;
-        public static final int bSentEmail=0x7f080010;
-        public static final int bSub=0x7f08000a;
-        public static final int bSub1=0x7f080025;
-        public static final int bb_icon=0x7f08001b;
-        public static final int cell1=0x7f080017;
-        public static final int cell2=0x7f080018;
-        public static final int development=0x7f08001f;
-        public static final int etAmtEnter=0x7f080008;
-        public static final int etNameAdder=0x7f080006;
-        public static final int etNameDelete=0x7f08000d;
-        public static final int etNameUpdate=0x7f080023;
-        public static final int group=0x7f080020;
         public static final int infoAmt=0x7f080002;
-        public static final int ivLogo=0x7f080011;
-        public static final int listMe=0x7f08000c;
-        public static final int list_section_text=0x7f080016;
-        public static final int menu_settings=0x7f080026;
-        public static final int message=0x7f08000f;
-        public static final int mobile=0x7f08001e;
-        public static final int name=0x7f08001d;
-        public static final int skip=0x7f080021;
-        public static final int table=0x7f08000b;
-        public static final int textView1=0x7f080005;
-        public static final int textView2=0x7f080007;
-        public static final int tvEventDate=0x7f080015;
-        public static final int tvEventLocation=0x7f080014;
-        public static final int tvEventName=0x7f080012;
-        public static final int tvEventTime=0x7f080013;
-        public static final int tvsuggestions=0x7f080022;
-        public static final int windows_icon=0x7f080019;
+        public static final int menu_settings=0x7f080005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int buddy_adder=0x7f030001;
-        public static final int dbview=0x7f030002;
-        public static final int delete_entry=0x7f030003;
-        public static final int feedback=0x7f030004;
-        public static final int list_item_entry=0x7f030005;
-        public static final int list_item_section=0x7f030006;
-        public static final int standard_splash=0x7f030007;
-        public static final int tv=0x7f030008;
-        public static final int update=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;

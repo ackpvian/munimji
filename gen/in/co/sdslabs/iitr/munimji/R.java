@@ -15,34 +15,16 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int add1=0x7f020000;
-        public static final int ap_1=0x7f020001;
-        public static final int apple=0x7f020002;
-        public static final int bb=0x7f020003;
-        public static final int bgcolor=0x7f020004;
-        public static final int delete=0x7f020005;
-        public static final int edit=0x7f020006;
-        public static final int feedback=0x7f020007;
-        public static final int given=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int info=0x7f02000a;
-        public static final int intentfinal=0x7f02000b;
-        public static final int me=0x7f02000c;
-        public static final int mobile_one=0x7f02000d;
-        public static final int mobile_two=0x7f02000e;
-        public static final int skip_glow=0x7f02000f;
-        public static final int skip_normal=0x7f020010;
-        public static final int skip_selector=0x7f020011;
-        public static final int taken=0x7f020012;
-        public static final int windows=0x7f020013;
+        public static final int bgcolor=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int intentfinal=0x7f020002;
     }
     public static final class id {
-        public static final int AddId=0x7f080000;
-        public static final int Update_Entry=0x7f080001;
-        public static final int bDelEntry=0x7f080003;
-        public static final int bFeedBack=0x7f080004;
-        public static final int infoAmt=0x7f080002;
-        public static final int menu_settings=0x7f080005;
+        public static final int budgetButton=0x7f080002;
+        public static final int groupButton=0x7f080003;
+        public static final int lendButton=0x7f080000;
+        public static final int menu_settings=0x7f080004;
+        public static final int personalButton=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

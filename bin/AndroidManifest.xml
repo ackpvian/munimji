@@ -5,8 +5,8 @@
     android:versionName="0.1 beta" >
 
     <uses-sdk
-        android:minSdkVersion="4"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
@@ -30,66 +30,48 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".LendActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.LENDACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Adder"
-            android:icon="@drawable/add1"
-            android:label="Add Buddy"
+            android:name=".PersonalActivity"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="com.example.munimji.ADDER" />
+                <action android:name="android.intent.action.PERSONALACTIVTY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".View"
-            android:icon="@drawable/info"
-            android:label="View Records"
+            android:name=".BudgetActivity"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="com.example.munimji.VIEW" />
+                <action android:name="android.intent.action.BUDGETACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Update"
-            android:icon="@drawable/edit"
-            android:label="Update Entry"
+            android:name=".GroupActivity"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="com.example.munimji.UPDATE" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="in.co.sdslabs.munimji.AboutUsActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".Delete"
-            android:icon="@drawable/delete"
-            android:label="Delete Records"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="com.example.munimji.DELETE" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".FeedBack"
-            android:icon="@drawable/feedback"
-            android:label=" "
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="com.example.munimji.FEEDBACK" />
+                <action android:name="android.intent.action.GROUPACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

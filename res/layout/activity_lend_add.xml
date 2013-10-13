@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Name"
+        android:inputType="textPersonName"
         android:textAlignment="textStart" >
 
         <requestFocus />
@@ -24,19 +24,37 @@
         android:hint="For?" />
 
     <EditText
-        android:id="@+id/editTextWhen"
+        android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date"
-        android:hint="DD/MM/YYYY" />
+        android:hint="DD/MM/YYYY"
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/editTextAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
-        android:hint="Amount" />
+        android:hint="Amount"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonMoneyGiven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Given" />
+
+        <Button
+            android:id="@+id/buttonMoneyTaken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taken" />
+
+    </LinearLayout>
 
 </LinearLayout>

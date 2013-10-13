@@ -15,8 +15,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		super.onCreate(savedInstanceState);
 		lendBtton = (Button) findViewById(R.id.lendButton);
 		lendBtton.setOnClickListener(this);
 		personalBtton = (Button) findViewById(R.id.personalButton);
@@ -37,25 +37,25 @@ public class MainActivity extends Activity implements OnClickListener {
 		return true;
 	}
 
-	// giving life to button
+	// giving life to buttons
 	public void onClick(android.view.View v) {
 		// TODO Auto-generated method stub
 		int id = v.getId();
 		if (id == R.id.lendButton) {
 			Intent intent = new Intent(this, LendActivity.class);
-			startActivity(intent); // initializing AddWizard activity
+			startActivity(intent); 
 		}
 		if (id == R.id.personalButton) {
 			Intent intent = new Intent(this, PersonalActivity.class);
-			startActivity(intent); // initializing AddWizard activity
+			startActivity(intent); 
 		}
 		if (id == R.id.budgetButton) {
 			Intent intent = new Intent(this, BudgetActivity.class);
-			startActivity(intent); // initializing AddWizard activity
+			startActivity(intent); 
 		}
 		if (id == R.id.groupButton) {
 			Intent intent = new Intent(this, GroupActivity.class);
-			startActivity(intent); // initializing AddWizard activity
+			startActivity(intent); 
 		}
 
 	}

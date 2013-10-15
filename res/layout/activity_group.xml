@@ -9,7 +9,7 @@
         android:layout_height="wrap_content" >
 
         <AutoCompleteTextView
-            android:id="@+id/lendSearch"
+            android:id="@+id/groupSearch"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -18,7 +18,7 @@
             android:textAlignment="textStart" />
 
         <Button
-            android:id="@+id/lendAddButton"
+            android:id="@+id/groupAddButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:drawable/ic_input_add" />
@@ -34,8 +34,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <ListView
-                android:id="@+id/lendList"
+            <ListViews
+                android:id="@+id/groupList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

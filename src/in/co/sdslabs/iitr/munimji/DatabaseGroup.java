@@ -9,21 +9,23 @@ import android.database.CursorIndexOutOfBoundsException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class Database {
+public class DatabaseGroup{
 
 	public static final String ROWID = "_id";
-	public static final String NAME = "_name";
+	public static final String GROUPNAME = "_groupname";
+	public static final String PAIDNAME = "_paidname";
+	public static final String TAKERNAME = "_takername";
 	public static final String DATE = "_date";
 	public static final String FOR = "_for";
 	public static final String AMOUNT = "_amt";
 
 	private static final String AMT_DB = "AMOUNTDB";
-	private static final String TABLE = "AMOUNTDB";
+	public static String TABLE = GROUPNAME;
 	private static final int DBVERSION = 1;
 
 	private Dbmaker1 maker;
 	private final Context context;
-	private SQLiteDatabase database;
+	private SQLiteDatabase DatabaseGroup;
 
 	private static class Dbmaker1 extends SQLiteOpenHelper {
 
@@ -32,35 +34,47 @@ public class Database {
 			// TODO Auto-generated constructor stub
 		}
 
-		@Override
-		public void onCreate(SQLiteDatabase db) {
+		public void onCreate1(SQLiteDatabase db) {
 			// TODO Auto-generated method stub
 			db.execSQL("CREATE TABLE " + TABLE + "(" + ROWID
-					+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME
-					+ " TEXT NOT NULL, "+ DATE
+					+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + GROUPNAME
+					+ " TEXT NOT NULL, " + PAIDNAME
+					+ " TEXT NOT NULL," + TAKERNAME
+					+ " TEXT NOT NULL,"+ DATE
 					+ " TEXT NOT NULL, "+ FOR
 					+ " TEXT NOT NULL, " + AMOUNT + " DOUBLE);");
 
+		}
+		
+		public void onUpgrade1(SQLiteDatabase db, int oldVersion, int newVersion) {
+			// TODO Auto-generated method stub
+			db.execSQL("DROP TABLE IF EXISTES" + TABLE);
+			onCreate1(db);
+		}
+
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+			// TODO Auto-generated method stub
+			
 		}
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 			// TODO Auto-generated method stub
-			db.execSQL("DROP TABLE IF EXISTES" + TABLE);
-			onCreate(db);
+			
 		}
 
 	}
 
-	public Database(Context r) {
+	public DatabaseGroup(Context r) {
 		context = r;
 
 	}
 
-	public Database open() {
+	public DatabaseGroup open() {
 		maker = new Dbmaker1(context);
 
-		database = maker.getWritableDatabase();
+		DatabaseGroup = maker.getWritableDatabase();
 		return this;
 	}
 
@@ -68,23 +82,20 @@ public class Database {
 		maker.close();
 	}
 
-	public long createEntry(String name, String when, String forWhat, Double amount)
+	public long createEntry(String groupname,String paidname,String takername, 
+			String when, String forWhat, Double amount)
 			throws CursorIndexOutOfBoundsException {
 		// TODO Auto-generated method stub
 
-		Cursor c = database.query(TABLE, new String[] { NAME }, NAME + " = ?",
-				new String[] { name }, null, null, null);
-		if (c != null && c.getCount() > 0) {
-			throw new CursorIndexOutOfBoundsException(
-					"A Buddy with this name Already exists..!");
-		}
-		c.close();
+		
 		ContentValues cv = new ContentValues();
-		cv.put(NAME, name);
+		cv.put(GROUPNAME, groupname  );
+		cv.put(PAIDNAME, paidname );
+		cv.put(PAIDNAME, takername );
 		cv.put(FOR, forWhat);
 		cv.put(DATE, when);
 		cv.put(AMOUNT, amount);
-		return database.insert(TABLE, null, cv);
+		return DatabaseGroup.insert(TABLE, null, cv);
 
 	}
 
@@ -92,7 +103,7 @@ public class Database {
 			throws CursorIndexOutOfBoundsException {
 		// TODO Auto-generated method stub
 
-		Cursor c = database.rawQuery("SELECT _amt FROM " + TABLE + " WHERE "
+		Cursor c = DatabaseGroup.rawQuery("SELECT _amt FROM " + TABLE + " WHERE "
 				+ NAME + " = \'" + name + "\'", null);
 
 		if (c.moveToFirst())
@@ -101,14 +112,14 @@ public class Database {
 
 		ContentValues cv = new ContentValues();
 		cv.put(AMOUNT, amount);
-		database.update(TABLE, cv, NAME + " = \'" + name + "\'", null);
+		DatabaseGroup.update(TABLE, cv, NAME + " = \'" + name + "\'", null);
 
 	}
 
 	public void updateEntrySub(String name, Double amount) {
 		// TODO Auto-generated method stub
 
-		Cursor c = database.rawQuery("SELECT _amt FROM " + TABLE + " WHERE "
+		Cursor c = DatabaseGroup.rawQuery("SELECT _amt FROM " + TABLE + " WHERE "
 				+ NAME + " = \'" + name + "\'", null);
 
 		if (c.moveToFirst())
@@ -117,14 +128,16 @@ public class Database {
 
 		ContentValues cv = new ContentValues();
 		cv.put(AMOUNT, amount);
-		database.updateWithOnConflict(TABLE, cv, NAME + "=?", null,
-				SQLiteDatabase.CONFLICT_IGNORE);
+		DatabaseGroup.updateWithOnConflict(TABLE, cv, NAME + "=?", null,
+				SQLiteDatabaseGroup.CONFLICT_IGNORE);
 	}
 */
+	
+	/*
 	public int getAmt() {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { ROWID, NAME, AMOUNT };
-		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
+		Cursor c = DatabaseGroup.query(TABLE, columns, null, null, null, null, null);
 		
 		int total = 0;
 		int iAmt = c.getColumnIndex(AMOUNT);
@@ -141,7 +154,7 @@ public class Database {
 
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { ROWID, NAME, AMOUNT };
-		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
+		Cursor c = DatabaseGroup.query(TABLE, columns, null, null, null, null, null);
 		String result = "";
 
 		int iName = c.getColumnIndex(NAME);
@@ -157,7 +170,7 @@ public class Database {
 	public void getSuggestions(ArrayList<String> result) {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { NAME };
-		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
+		Cursor c = DatabaseGroup.query(TABLE, columns, null, null, null, null, null);
 
 		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
 			result.add(c.getString(0));
@@ -167,7 +180,7 @@ public class Database {
 	public String getData2() {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { ROWID, NAME, AMOUNT };
-		Cursor c = database.query(TABLE, columns, null, null, null, null, null);
+		Cursor c = DatabaseGroup.query(TABLE, columns, null, null, null, null, null);
 		String result = "";
 
 		int total = 0;
@@ -183,8 +196,8 @@ public class Database {
 
 	public void deleteEntry(String name2) {
 		// TODO Auto-generated method stub
-		database.delete(TABLE, NAME + "=?", new String[] { name2 });
-	}
+		DatabaseGroup.delete(TABLE, NAME + "=?", new String[] { name2 });
+	}*/
 
 
 }

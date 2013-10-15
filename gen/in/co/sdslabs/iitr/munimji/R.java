@@ -20,42 +20,44 @@ public final class R {
         public static final int intentfinal=0x7f020002;
     }
     public static final class id {
-        public static final int budgetButton=0x7f080019;
-        public static final int buttonGroupTransaction=0x7f08000d;
-        public static final int buttonMoneyGiven=0x7f080015;
-        public static final int buttonMoneyTaken=0x7f080016;
-        public static final int editTextAmount=0x7f080014;
-        public static final int editTextDate=0x7f080013;
-        public static final int editTextFor=0x7f080012;
-        public static final int editTextGroupAmount=0x7f08000c;
-        public static final int editTextGroupDate=0x7f08000b;
-        public static final int editTextGroupFor=0x7f08000a;
-        public static final int editTextGroupPaidName=0x7f080008;
-        public static final int editTextGroupTakerName=0x7f080009;
-        public static final int editTextName=0x7f080011;
+        public static final int budgetButton=0x7f08001a;
+        public static final int buttonGroupHistoryView=0x7f08000d;
+        public static final int buttonGroupTransaction=0x7f08000c;
+        public static final int buttonMoneyGiven=0x7f080016;
+        public static final int buttonMoneyTaken=0x7f080017;
+        public static final int editTextAmount=0x7f080015;
+        public static final int editTextDate=0x7f080014;
+        public static final int editTextFor=0x7f080013;
+        public static final int editTextGroupAmount=0x7f08000b;
+        public static final int editTextGroupDate=0x7f08000a;
+        public static final int editTextGroupFor=0x7f080009;
+        public static final int editTextGroupPaidName=0x7f080007;
+        public static final int editTextGroupTakerName=0x7f080008;
+        public static final int editTextName=0x7f080012;
         public static final int groupAddButton=0x7f080001;
-        public static final int groupAddMemberButton=0x7f080005;
-        public static final int groupButton=0x7f08001a;
-        public static final int groupList=0x7f080003;
-        public static final int groupMemberName=0x7f080004;
-        public static final int groupMembersList=0x7f080007;
+        public static final int groupAddMemberButton=0x7f080004;
+        public static final int groupButton=0x7f08001b;
+        public static final int groupMemberName=0x7f080003;
+        public static final int groupMembersList=0x7f080006;
         public static final int groupSearch=0x7f080000;
         public static final int lendAddButton=0x7f08000f;
-        public static final int lendButton=0x7f080017;
-        public static final int lendList=0x7f080010;
+        public static final int lendButton=0x7f080018;
+        public static final int lendList=0x7f080011;
         public static final int lendSearch=0x7f08000e;
-        public static final int menu_settings=0x7f08001b;
-        public static final int personalButton=0x7f080018;
-        public static final int scrollView1=0x7f080002;
-        public static final int scrollViewGroup=0x7f080006;
+        public static final int menu_settings=0x7f08001c;
+        public static final int personalButton=0x7f080019;
+        public static final int scrollView1=0x7f080010;
+        public static final int scrollViewGroup=0x7f080005;
+        public static final int tvName=0x7f080002;
     }
     public static final class layout {
         public static final int activity_group=0x7f030000;
-        public static final int activity_group_member_add=0x7f030001;
-        public static final int activity_group_transaction=0x7f030002;
-        public static final int activity_lend=0x7f030003;
-        public static final int activity_lend_add=0x7f030004;
-        public static final int activity_main=0x7f030005;
+        public static final int activity_group_db_view=0x7f030001;
+        public static final int activity_group_member_add=0x7f030002;
+        public static final int activity_group_transaction=0x7f030003;
+        public static final int activity_lend=0x7f030004;
+        public static final int activity_lend_add=0x7f030005;
+        public static final int activity_main=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;

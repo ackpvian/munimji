@@ -43,19 +43,21 @@ public class MainActivity extends Activity implements OnClickListener {
 		int id = v.getId();
 		if (id == R.id.lendButton) {
 			Intent intent = new Intent(this, LendActivity.class);
-			startActivity(intent); 
+			startActivity(intent);
 		}
 		if (id == R.id.personalButton) {
 			Intent intent = new Intent(this, PersonalActivity.class);
-			startActivity(intent); 
+			startActivity(intent);
 		}
 		if (id == R.id.budgetButton) {
 			Intent intent = new Intent(this, BudgetActivity.class);
-			startActivity(intent); 
+			startActivity(intent);
 		}
 		if (id == R.id.groupButton) {
-			Intent intent = new Intent(this, GroupActivity.class);
-			startActivity(intent); 
+			// Intent intent = new Intent(this, GroupActivity.class);
+			Intent intent = new Intent(this, GroupTransactionActivity.class);
+
+			startActivity(intent);
 		}
 
 	}

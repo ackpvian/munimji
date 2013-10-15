@@ -1,12 +1,12 @@
 package in.co.sdslabs.iitr.munimji;
 
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseGroup {
 
@@ -41,8 +41,7 @@ public class DatabaseGroup {
 					+ " TEXT NOT NULL, " + PAIDNAME + " TEXT NOT NULL,"
 					+ TAKERNAME + " TEXT NOT NULL," + DATE + " TEXT NOT NULL, "
 					+ FOR + " TEXT NOT NULL, " + AMOUNT + " DOUBLE);");
-				}
-		
+		}
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -190,6 +189,60 @@ public class DatabaseGroup {
 		}
 
 		return result;
+	}
+
+	public String getSummary() {
+		String[] columns = new String[] { ROWID, GROUPNAME, PAIDNAME,
+				TAKERNAME, AMOUNT };
+		Cursor c = DatabaseGroup.query(TABLE, columns, null, null, null, null,
+				null);
+		String summary = "";
+
+		String[] memberNames = new String[100];
+		int count = 0;
+		int[] netAmount = new int[100];
+		boolean flag = false;
+
+		int iPaidName = c.getColumnIndex(PAIDNAME);
+		int iTakerName = c.getColumnIndex(TAKERNAME);
+		int iAmount = c.getColumnIndex(AMOUNT);
+		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+			flag = false;
+			for (int i = 0; i < count; i++) {
+				if (memberNames[i] == c.getString(iTakerName)) {
+					flag = true;
+					netAmount[i] -= c.getInt(iAmount);
+				}
+				if (flag == false) {
+					memberNames[count] = c.getString(iTakerName);
+					count++;
+					netAmount[count - 1] -= c.getInt(iAmount);
+
+				}
+				flag = false;
+				for (int j = 0; j < count; j++) {
+					if (memberNames[j] == c.getString(iPaidName)) {
+						flag = true;
+						netAmount[j] += c.getInt(iAmount);
+					}
+					if (flag == false) {
+						memberNames[count] = c.getString(iPaidName);
+						count++;
+						netAmount[count - 1] += c.getInt(iAmount);
+					}
+				}
+				
+
+			}
+			Log.i(memberNames[1], "Fokti");
+			
+		}
+		for (int k = 0; k < count; k++) {
+			summary += memberNames[k] + " pays " + netAmount[k] + "\n";
+
+		}
+		return summary;
+
 	}
 
 }

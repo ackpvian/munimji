@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class GroupTransactionActivity extends Activity implements
 		OnClickListener {
 
-	Button groupTransactionDone, groupHistoryView;
+	Button groupTransactionDone, groupHistoryView, groupSummaryView;
 	EditText groupPaidName, groupTakerName, groupDate, groupAmount, groupFor;
 
 	@Override
@@ -23,6 +23,8 @@ public class GroupTransactionActivity extends Activity implements
 		groupTransactionDone.setOnClickListener(this);
 		groupHistoryView = (Button) findViewById(R.id.buttonGroupHistoryView);
 		groupHistoryView.setOnClickListener(this);
+		groupSummaryView = (Button) findViewById(R.id.buttonGroupSummaryView);
+		groupSummaryView.setOnClickListener(this);
 		groupPaidName = (EditText) findViewById(R.id.editTextGroupPaidName);
 		groupTakerName = (EditText) findViewById(R.id.editTextGroupTakerName);
 		groupDate = (EditText) findViewById(R.id.editTextGroupDate);
@@ -78,6 +80,11 @@ public class GroupTransactionActivity extends Activity implements
 			}
 		} else if (id == R.id.buttonGroupHistoryView) {
 			Intent intent = new Intent(this, GroupView.class);
+			startActivity(intent);
+
+		}
+		else if (id == R.id.buttonGroupSummaryView) {
+			Intent intent = new Intent(this, GroupSummary.class);
 			startActivity(intent);
 
 		}
